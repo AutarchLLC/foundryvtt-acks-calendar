@@ -456,6 +456,7 @@
 	"FSC.Migration.v1v2.Help": "¡Bienvenido a Simple Calendar versión 2!<br/><br/>¡Para la lista completa de mejoras, revisa el <a href='https://github.com/vigoren/foundryvtt-simple-calendar/blob/main/CHANGELOG.md'> registro de cambios</a>!<br/><br/>Partes de las mejoras requirieron cambios en la forma como Simple Calendar guarda datos, pero no te preocupes, ¡Simple Calendar ya está moviendo tus datos al nuevo formato!",
 	"FSC.MakeActive": "Activar este Calendario",
 	"FSC.Configuration.Theme.WFRP4E": "Warhammer Fantasy Roleplay 4ª Edición",
+	"FSC.Predefined.ACKS-II-IC": "ACKS II: Calendario Imperial Aura",
 	"FSC.Predefined.DarkSun": "Sol Oscuro",
 	"FSC.Predefined.DSA-TDE5e": "El Ojo Oscuro 5ª Edición",
 	"FSC.Predefined.Eberron": "Eberron 5e",

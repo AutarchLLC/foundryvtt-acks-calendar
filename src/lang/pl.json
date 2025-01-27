@@ -117,6 +117,7 @@
 	"FSC.NoteDirty": "Niezapisane Zmiany",
 	"FSC.NoteDirtyText": "W tej notatce znajdują się niezapisnae zmiany. Czy mimo to chcesz ją zamknąć? Zmiany zostaną utracone.",
 	"FSC.ChangePreviousMonth": "Poprzedni Miesiąc",
+	"FSC.Predefined.ACKS-II-IC": "ACKS II: Kalendarz Imperialny Aura",
 	"FSC.Predefined.WarhammerIC": "Warhammer: Kalendarz Imperialny",
 	"FSC.Predefined.TravellerIC": "Traveller: Kalendarz Imperialny",
 	"FSC.ChangeNextMonth": "Następny Miesiąc",

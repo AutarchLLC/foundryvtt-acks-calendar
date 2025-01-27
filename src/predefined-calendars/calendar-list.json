@@ -1,5 +1,6 @@
 [
   {"key": "gregorian", "label": "FSC.Configuration.LeapYear.Rules.Gregorian", "config":  true, "notes":  false},
+  {"key": "acks-ii-ic", "label": "FSC.Predefined.ACKS-II-IC", "config":  true, "notes":  true},
   {"key": "darksun", "label": "FSC.Predefined.DarkSun", "config":  true, "notes":  false},
   {"key": "dsa-tde5e", "label": "FSC.Predefined.DSA-TDE5e", "config":  true, "notes":  true},
   {"key": "eberron", "label": "FSC.Predefined.Eberron", "config":  true, "notes":  true},

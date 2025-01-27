@@ -439,6 +439,7 @@
 	"FSC.Configuration.CombatPauseRule.Active": "Pauza pouze na aktivní scéně",
 	"FSC.Configuration.General.CalendarNameHelp": "Název kalendáře, který jej pomůže odlišit od ostatních kalendářů.",
 	"FSC.Configuration.Notes.PostNoteRemindersOnFoundryLoadTitle": "Odesílat připomenutí při přihlášení",
+	"FSC.Predefined.ACKS-II-IC": "ACKS II: Auran Imperial Calendar",
 	"FSC.Predefined.WarhammerIC": "Warhammer: Imperial Calendar",
 	"FSC.RemoveCalendar": "Smazat kalendář",
 	"FSC.Round": "Kolo",
