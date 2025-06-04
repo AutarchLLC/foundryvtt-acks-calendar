@@ -180,6 +180,8 @@ export enum MigrationTypes {
 export enum PredefinedCalendars {
     /** The standard real life calendar */
     Gregorian = "gregorian",
+    /** This is the Auran Imperial calendar for the ACKS II game system, as published in Axioms TBD. */
+    ACKSIIAuranImperial = "acks-ii-ic",
     /** This is the calendar from the Dark Sun setting for Dungeons and Dragons */
     DarkSun = "darksun",
     /** This is the calendar from the Eberron setting for Dungeons and Dragons */
