@@ -142,9 +142,11 @@ export default class CalendarManager {
     public async getDefaultCalendar(): Promise<Calendar> {
         let dCal = this.getCalendar("default");
         if (!dCal) {
-            dCal = this.addCalendar("default", "Default", { id: "" });
+            dCal = this.addCalendar("default", "Auran Imperial Calendar", { id: "" });
             //Set the default calendar type to be our Gregorian calendar
-            await PredefinedCalendar.setToPredefined(dCal, PredefinedCalendars.Gregorian);
+            //await PredefinedCalendar.setToPredefined(dCal, PredefinedCalendars.Gregorian);
+            // Default to ACKS II calendar
+            await PredefinedCalendar.setToPredefined(dCal, PredefinedCalendars.ACKSIIAuranImperial);
         }
         return dCal;
     }
