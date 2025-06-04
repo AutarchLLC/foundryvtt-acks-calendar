@@ -1,7 +1,7 @@
 # This workflow will do a clean installation of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Update Release's
+name: Update Release
 
 on:
   release:
@@ -10,8 +10,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v4
+
     - name: Manifest and Download Links
       id: manifest_link_version
       uses: cschleiden/replace-tokens@v1
@@ -20,6 +22,7 @@ jobs:
       env:
         MANIFEST: https://github.com/${{github.repository}}/releases/latest/download/module.json
         DOWNLOAD: https://github.com/${{github.repository}}/releases/download/${{github.event.release.tag_name}}/module.zip
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -32,26 +35,31 @@ jobs:
       with:
         name: module-download
         path: dist/
+
     - name: Archive module json
       uses: actions/upload-artifact@v4
       with:
         name: module
         path: dist/module.json
+
   release:
     needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Download module download file
         uses: actions/download-artifact@v4
         with:
           name: module-download
           path: module-download
+
       - name: Download module.json
         uses: actions/download-artifact@v4
         with:
           name: module
       # Create a zip file with all files required by the module to add to the release
       - run: (cd module-download; zip -r ../module.zip .)
+
       - name: Update Release with Files
         id: create_version_release
         uses: ncipollo/release-action@v1
@@ -64,16 +72,4 @@ jobs:
           artifacts: './module.json, ./module.zip'
           tag: ${{ github.event.release.tag_name }}
           body: ${{ github.event.release.body }}
-  publish:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20.x'
-          registry-url: 'https://registry.npmjs.org'
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
